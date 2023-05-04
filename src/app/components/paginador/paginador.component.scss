@@ -1,0 +1,58 @@
+::ng-deep.center-pagination {
+    text-align: center;
+}
+::ng-deep.tablas {
+    display: flex;
+    justify-content: center;
+    .pagination {
+        margin: 30px 0;
+        display: inline-block;
+    }
+    .pagination button {
+        float: left;
+        color: #19263A;
+        padding: 0px 14px;
+        text-decoration: none;
+        font-family: "Poppins";
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        font-size: 12px;
+        padding: 0px;
+        margin: 0 5px;
+        height: 25px;
+    }
+    .pagination button.hover,
+    .pagination button.active {
+        width: 25px;
+        height: 25px;
+        color: white;
+        background: #00F9FF;
+        border-radius: 50%;
+        font-weight: bold;
+        cursor: pointer;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        display: inherit;
+        padding: 3px;
+    }
+    .pagination button:disabled i {
+        color: inherit;
+    }
+    .a-act,
+    .pagination i {
+        color: #00F9FF;
+    }
+}
+
+@media (max-width: 1199px) {
+    .tablas {
+        .pagination button {
+            font-size: 11px;
+            padding: 0;
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+<div *ngIf="dataMovie">
+    <div class="container">
+        <i class="fa-solid fa-arrow-left-long" (click)="_service.url('/home')"></i>
+        <div class="row">
+            <div class="col-12 col-sm-5">
+                <div class="container-lado-izquierdo">
+                    <img [src]="img+dataMovie.poster_path" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-sm-7">
+                <div class="container-derecho">
+                    <h1>{{ dataMovie.title }}</h1>
+                    <span>{{ dataMovie.tagline }}</span>
+                    <p>{{ dataMovie.overview }}</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="">Genero</label>
+                            <div class="content-genero">
+                                <div *ngFor="let item of dataMovie.genres">{{ item.name }}</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <label for="" class="center-label">Compañias</label>
+                            <div class="content-companies">
+                                <div class="companies" *ngFor="let item of dataMovie.production_companies">
+                                    <img [src]="img+item.logo_path" alt="" *ngIf="item.logo_path">
+                                    <label for="">{{ item.name }}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div [class]="'tablas'" class="center-pagination">
+	<div class="pagination" id="paginacion">
+	    <button [disabled]="btnMostrarAtras()"  (click)="irAnterior()"><i class="fas fa-chevron-left"></i></button>
+	    <ng-container *ngFor="let item of arrayPaginacion; let i = index">
+	        <button *ngIf="mostrar3PuntosSiguiente(i)"  (click)="irCantidadArriba()">...</button>
+	        <button [class]="indice == i ? 'active' : ''" (click)="irSelected(i)" *ngIf="mostrarElemento(i)">{{ i + 1 }}</button>
+	        <button *ngIf="mostrar3PuntosAtras(i)" (click)="irCantidadAbajo()">...</button>
+	    </ng-container>
+	    <button [disabled]="btnMostrarSiguiente()" (click)="irSiguiente()"><i class="fas fa-chevron-right"></i></button>
+	</div>
+</div>

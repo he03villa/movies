@@ -1,0 +1,10 @@
+<div class="container-movil" (click)="ir(data.id)">
+    <div class="container-movil-img">
+        <img [src]="img + data.poster_path" alt="">
+    </div>
+    <div class="container-movil-body">
+        <h1>{{ data.title }}</h1>
+        <p>{{ data.overview }}</p>
+        <label for="">Fecha lanzamiento: {{ data.release_date }}</label>
+    </div>
+</div>
